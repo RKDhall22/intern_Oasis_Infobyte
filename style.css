@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text: 1.5rem;
+    --head: calc(1rem + 5vw);
+    --bg-color: #f6b93b;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.Natural {
+    min-height: 100vh;
+    background: url(https://content.jdmagicbox.com/comp/pune/s4/020pxx20.xx20.210518184547.h4s4/catalogue/kavedia-jewellers-pvt-ltd-sangavi-pune-gold-mangalsutra-pendant-dealers-nwryiaqhu9.jpg?clr=);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 2;
+    animation: slide 1s ease-in-out;
+    
+}
+
+.Green {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 0rem 1.5rem;
+    color: rgb(8, 245, 59);
+    transform: translateY(-100%);
+    animation: movedown 850ms ease-in 1s forwards;
+}
+
+@keyframes movedown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
+.Green ul {
+    list-style: none;
+}
+
+.Green ul li {
+    display: inline-block;
+    margin-left: 3rem;
+    font-size: var(--text);
+}
+
+.Green ul li a {
+    text-decoration: none;
+    color: rgb(238, 12, 12);
+    border-bottom: 2px solid transparent;
+}
+
+.Green ul li a:hover {
+    border-bottom: 2px solid var(--bg-color);
+}
+
+.Red {
+    color: rgb(195, 230, 71);
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+.Red::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: -1;
+    top: 0;
+    opacity: 0.6;
+}
+
+.Red a {
+    color: white;
+    background: var(--bg-color);
+    font-weight: 900;
+    font-size: var(--text);
+    padding: 0.9rem 2rem;
+    margin: 0.9rem auto;
+    display: block;
+    text-decoration: none;
+    transition: opacity 240ms linear;
+}
+
+.Red a:hover {
+    opacity: 0.9;
+}
+
+.Red h1 {
+    font-size: var(--head);
+}
+
+.Red p {
+    font-size: 3rem;
+}
